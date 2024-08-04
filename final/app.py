@@ -26,7 +26,7 @@ with col2:
 st.markdown("""
 ### Unleash the Hidden Insights
 
-Dive into the depths of your daily chats or seek meaningful patterns with our cutting-edge WhatsApp Chat Analyzer. This tool provides comprehensive analysis with ease, offering:
+Dive into the depths of your daily chats or seek meaningful patterns with our cutting-edge ***WhatsApp Chat Analyzer***. This tool provides comprehensive analysis with ease, offering:
 
 - Detailed statistics on the number of messages sent and received.
 - Insights into active days and your busiest chat hours.
@@ -56,16 +56,23 @@ col1,col2,col3=st.columns([1,2,1])
 with col2:
      st.image("x_car.jpg",width=600)
 import streamlit as st
+import streamlit as st
 
 st.markdown("""
-### Car Price Prediction
+## Highlights
 
-Unlock the power of accurate car valuations with our state-of-the-art Car Price Prediction tool, designed to provide precise and insightful assessments of any vehicle's worth. This tool is an invaluable resource for anyone looking to buy, sell, or simply understand the market value of a car. By leveraging advanced algorithms and extensive data analysis, our Car Price Prediction tool takes into account a multitude of factors including the car’s company, model, year,fuel type and how much kilometers are driven by the car.
+Unlock the power of accurate car valuations with our state-of-the-art ***Car Price Prediction*** tool, designed to provide precise and insightful assessments of any vehicle's worth. This tool is an invaluable resource for anyone looking to buy, sell, or simply understand the market value of a car. By leveraging advanced algorithms and extensive data analysis, our Car Price Prediction tool takes into account a multitude of factors including the car’s company, model, year, fuel type, and how many kilometers are driven by the car.
 
-Enter the car's details into our user-friendly interface and receive an instant, comprehensive price prediction that reflects the car's true market value. Our tool goes beyond simple estimates, offering in-depth analysis and visualizations that show how various attributes, such as brand reputation, mileage, and condition, impact the car’s value. Explore historical price trends and future value projections, helping you to understand not only the current worth but also potential future price fluctuations.
+**Key Features:**
 
-Perfect for car enthusiasts, dealerships, and anyone in the market for a vehicle, our Car Price Prediction tool equips you with the knowledge needed to make informed, confident decisions. Whether you're negotiating a sale, making a purchase, or just curious about a car's value, our tool provides the detailed insights you need to navigate the automotive market effectively. Make data-driven decisions with confidence and ensure you get the best possible deal with our comprehensive Car Price Prediction tool.
+- **User-Friendly Interface:** Enter the car's details into our easy-to-use interface and receive an instant, comprehensive price prediction that reflects the car's true market value.
+- **In-Depth Analysis:** Our tool goes beyond simple estimates, offering in-depth analysis and visualizations that show how various attributes, such as brand reputation, mileage, and condition, impact the car’s value.
+- **Historical and Future Trends:** Explore historical price trends and future value projections, helping you understand not only the current worth but also potential future price fluctuations.
+- **Versatile Use:** Perfect for car enthusiasts, dealerships, and anyone in the market for a vehicle. 
+- **Informed Decisions:** Equip yourself with the knowledge needed to make informed, confident decisions. Whether you're negotiating a sale, making a purchase, or just curious about a car's value, our tool provides the detailed insights you need to navigate the automotive market effectively.
+- **Best Deals:** Make data-driven decisions with confidence and ensure you get the best possible deal with our comprehensive Car Price Prediction tool.
 """)
+
 
     
 # col1, col2, col3 = st.columns([1, 1, 1])
