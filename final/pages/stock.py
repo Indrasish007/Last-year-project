@@ -6,19 +6,19 @@ from prophet.plot import plot_plotly
 from plotly  import graph_objs as go
 import pandas as pd
 
-col1,col2,col3,col4=st.columns([1,1,1,1])
+col1,col2,col3,col4=st.columns([3,3,2,2])
 with col1:
     if st.button("Home Page"):
         st.switch_page("app.py")
 with col2:
-    if st.button("Stock Price Prediction"):
-        st.switch_page("pages/stock.py")
-with col3:
-    if st.button("Whatsapp Chat Analyzer"):
+     if st.button("Whatsapp Chat Analyzer"):
         st.switch_page("pages/whatsapp.py")
-with col4:
+with col3:
     if st.button("Car Price Prediction"):
         st.switch_page("pages/car.py")
+with col4:
+    if st.button("Stock Price Prediction"):
+        st.switch_page("pages/stock.py")
 
 START="2015-01-01"
 TODAY=dt.date.today().strftime("%Y-%m-%d")
