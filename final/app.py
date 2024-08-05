@@ -19,9 +19,11 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.title("Whatsapp Chat analyzer")
     
-col1,col2,col3=st.columns([1,4,1])
-with col2:
-    st.image("x_whatsapp_pic.png",width=665)
+col1,col2,col3,col4=st.columns([1,1,1,1])
+with col1:
+    st.image("x_whatsapp_pic.png",width=600)
+with col3:
+    st.image("x_whatsapp-icon-6953522.jpg",width=600)
 
 st.markdown("""
 ### Unleash the Hidden Insights
