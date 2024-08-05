@@ -99,10 +99,8 @@ Welcome to the Stock Price Prediction app, your go-to tool for forecasting futur
 
 **Key Features:**
 
-- **Navigation Buttons:** Quickly switch between different tools on our platform including Home Page, WhatsApp Chat Analyzer, Car Price Prediction, and Stock Price Prediction.
 - **Popular Stocks Selection:** Choose from a list of popular stocks fetched from a CSV file for quick access.
 - **Interactive User Interface:** Select the number of years for prediction using an intuitive slider.
-- **Data Loading and Display:** Load historical stock data from Yahoo Finance, with seamless data caching for faster performance.
 - **Visual Data Representation:** Display raw stock data and interactive time series plots using Plotly, making it easy to understand the stock's performance over time.
 - **Forecasting with Prophet:** Utilize the Prophet model to fit historical data and forecast future stock prices. View detailed forecast data, including forecast components and interactive plots.
 
