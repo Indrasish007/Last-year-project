@@ -14,8 +14,8 @@ with col4:
         st.switch_page("pages/stock.py")
         
 # whatsapp chat analysis
-
-col1, col2, col3 = st.columns([1, 2, 1])
+st.markdown("---")
+col1, col2= st.columns([2,4])
 with col2:
     st.title("Whatsapp Chat analyzer")
     
@@ -49,7 +49,7 @@ with col1 :
         st.switch_page("pages/whatsapp.py")
         
 #  car price prediction
-
+st.markdown("---")
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
     st.title("Car Price Predictor")
@@ -79,6 +79,7 @@ with col1 :
         st.switch_page("pages/car.py")
         
 # Stock price prediction
+st.markdown("---")
 col1, col2 = st.columns([2,4])
 with col2:
     st.title("Stock Price Predictor")
@@ -87,9 +88,37 @@ with col1:
     st.image("x_stock_price.jpg",width=600)
 with col3:
     st.image("x_stock_price2.jpg",width=600)
+import streamlit as st
 
-    
-# col1, col2, col3 = st.columns([1, 1, 1])
-# with col2:
-#     st.image("x_car.jpg",width=600)
-    # st.image("x_Stock_Price_Prediction.webp",width=600)
+import streamlit as st
+
+st.markdown("""
+### Stock Price Prediction
+
+Welcome to the Stock Price Prediction app, your go-to tool for forecasting future stock prices using advanced machine learning algorithms. This app leverages historical stock data and the powerful Prophet model to provide insightful predictions, helping you make informed investment decisions. 
+
+**Key Features:**
+
+- **Navigation Buttons:** Quickly switch between different tools on our platform including Home Page, WhatsApp Chat Analyzer, Car Price Prediction, and Stock Price Prediction.
+- **Popular Stocks Selection:** Choose from a list of popular stocks fetched from a CSV file for quick access.
+- **Interactive User Interface:** Select the number of years for prediction using an intuitive slider.
+- **Data Loading and Display:** Load historical stock data from Yahoo Finance, with seamless data caching for faster performance.
+- **Visual Data Representation:** Display raw stock data and interactive time series plots using Plotly, making it easy to understand the stock's performance over time.
+- **Forecasting with Prophet:** Utilize the Prophet model to fit historical data and forecast future stock prices. View detailed forecast data, including forecast components and interactive plots.
+
+**How It Works:**
+
+1. **Load Popular Stocks:** The app reads a list of popular stocks from a CSV file and displays them in a dropdown menu for selection.
+2. **Data Fetching:** Once a stock is selected, the app fetches historical stock data from Yahoo Finance, starting from January 1, 2015, to the current date.
+3. **Raw Data Display:** The app shows the most recent data entries for transparency.
+4. **Data Visualization:** Interactive charts display the stock's opening and closing prices over time, providing a clear visual representation of its historical performance.
+5. **Prediction Model:** The Prophet model is applied to the stock's closing price data to generate future price predictions. Users can choose the prediction period, ranging from 1 to 4 years.
+6. **Forecast Display:** The app presents the forecast data in an interactive plot, along with detailed forecast components.
+
+Make data-driven decisions with confidence and stay ahead of the market with our comprehensive Stock Price Prediction app.
+#### Click the button to predict the stock price of 4 years 
+""")
+col1, col2, col3 = st.columns([1, 1, 1])
+with col1 :
+    if st.button("stock analysis"):
+        st.switch_page("pages/stock.py")
