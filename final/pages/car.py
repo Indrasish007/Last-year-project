@@ -20,9 +20,6 @@ with col4:
 car = pd.read_csv("refine_car.csv")
 model = pickle.load(open("LinearRegressionModel.pkl", "rb"))
 
-# Streamlit app
-import streamlit as st
-
 # Using markdown with HTML and CSS
 st.markdown(
     """
@@ -43,9 +40,13 @@ year = sorted(car["year"].unique(), reverse=True)
 fuel_type = car["fuel_type"].unique()
 kms_driven = car["kms_driven"].unique()
 
-# dropdowns and input fields
+# Function to get car models based on selected company
+def get_car_models(selected_company):
+    return sorted(car[car["company"] == selected_company]["name"].unique())
+
+#selectbox
 selected_company = st.selectbox("Select company", companies)
-selected_car_model = st.selectbox("Select Car Model", car_models)
+selected_car_model= st.selectbox("Select car model",get_car_models(selected_company)) # for selecting the car model of the specified company
 selected_year = st.selectbox("Select Year", year)
 selected_fuel_type = st.selectbox("Select Fuel Type", fuel_type)
 selected_kms_driven = st.number_input("Enter Kilometers Driven", min_value=0, step=1000)
@@ -71,5 +72,3 @@ if predict_button:
             st.success(f"The predicted price of the car is ${predicted_price}")
         except Exception as e:
             st.error(f"Error: {e}")    
-
-    
