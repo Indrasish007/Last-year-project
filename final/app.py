@@ -77,14 +77,14 @@ with col1 :
         st.switch_page("pages/car.py")
         
 # Stock price prediction
-col1, col2, col3 = st.columns([1,2,1])
+col1, col2 = st.columns([2,4])
 with col2:
     st.title("Stock Price Predictor")
 col1,col2,col3,col4=st.columns([1,1,1,1])
 with col1:
-    st.image("x_stock_price_prediction.webp",width=600)
+    st.image("x_stock_price.jpg",width=600)
 with col3:
-    st.image("stock_price2.jpg",width=600)
+    st.image("x_stock_price2.jpg",width=600)
 
     
 # col1, col2, col3 = st.columns([1, 1, 1])
