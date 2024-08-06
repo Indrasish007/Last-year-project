@@ -120,3 +120,8 @@ col1, col2, col3 = st.columns([1, 1, 1])
 with col1 :
     if st.button("stock analysis"):
         st.switch_page("pages/stock.py")
+st.markdown(
+    '''
+      ####  ***If you face any kind of inconvenience Contact us : indrasishadhya770@gmail.com ,  dashimadri1414@gmail.com*** 
+    '''
+)
