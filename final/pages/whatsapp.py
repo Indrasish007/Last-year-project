@@ -3,7 +3,6 @@ import preprocessor,helper
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 import seaborn as sns
-
 col1,col2,col3,col4=st.columns([1,1,1,1])
 with col1:
     if st.button("Home Page"):
