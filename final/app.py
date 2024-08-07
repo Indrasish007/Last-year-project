@@ -122,6 +122,6 @@ with col1 :
         st.switch_page("pages/stock.py")
 st.markdown(
     '''
-      ####  ***If you face any kind of inconvenience Contact us : indrasishadhya770@gmail.com ,  dashimadri1414@gmail.com*** 
+      ####  ***If you face any kind of inconvenience Contact us : indrasishadhya770@gmail.com ,  dashimadri1214@gmail.com*** 
     '''
 )
