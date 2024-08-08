@@ -28,9 +28,10 @@ try:
         data= bytes_data.decode("utf-8")
         # st.text(data)
         df=preprocessor.preprocess(data)
+
         
         # st.dataframe(df)
-        
+
         # fetch unique users
         user_list=df["users"].unique().tolist()
         user_list.remove("group_notification")
@@ -105,8 +106,8 @@ try:
             col1,col2=st.columns(2)
             with col1:
                 st.header("Most busy user")
-                ax.bar(x.index,x.values, color=['red', 'green', 'blue', 'orange','yellow'])
-                plt.xticks(rotation="vertical")
+                ax.pie(x.values,labels=x.index, colors=['red', 'green', 'blue', 'orange','yellow'])
+                # plt.xticks(rotation="vertical")
                 st.pyplot(fig)
             with col2:
                 st.header("Percentage of chatting")
@@ -117,14 +118,19 @@ try:
         fig,ax=plt.subplots()
         ax.imshow(df_wc)
         st.pyplot(fig)
-        
+
         #most common words
         most_common_df=helper.most_common_words(selected_user,df)
         fig,ax=plt.subplots()
         ax.barh(most_common_df[0],most_common_df[1])
-        
+
         st.title("Most common words")
         st.pyplot(fig)
         # st.dataframe(most_common_df)
-except:
-    st.error("Text file should be in 24 hr and dd/mm/yyyy format")  # Display an error message if the user is not found in
+        # Display an error message if the user is not found in
+except UnicodeDecodeError:
+    st.error("Error: The file is not in the correct format. Please upload a valid text file.")
+except ValueError:
+    st.error("Error: There was an issue processing the file. Please make sure the file format is correct.")
+except Exception as e:
+    st.error(f"An unexpected error occurred: {e}")
